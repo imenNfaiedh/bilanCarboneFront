@@ -1,1 +1,23 @@
-<p>layout-admin works!</p>
+<div class="container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>Bilan Carbone</h2>
+    <p>Collecte de données</p>
+
+    <div class="progress">
+      <span>Progression <strong>0%</strong></span>
+      <div class="bar"></div>
+    </div>
+
+    <ul class="menu">
+      <li routerLink="objectifs" routerLinkActive="active">1. Objectifs</li>
+      <li routerLink="perimetre" routerLinkActive="active">2. Périmètre du Bilan Carbone</li>
+
+    </ul>
+  </aside>
+
+  <!-- Contenu -->
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
