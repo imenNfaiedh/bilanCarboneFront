@@ -1,23 +1,27 @@
-<div class="container">
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <h2>Bilan Carbone</h2>
-    <p>Collecte de données</p>
+<div class="flex">
+  <!-- Sidebar fixe -->
+  <aside class="w-64 fixed top-0 left-0 h-full p-6 bg-gray-50 shadow-md">
+    <h2 class="text-2xl font-bold mb-2 text-blue-700">Bilan Carbone</h2>
+    <p class="text-gray-600 mb-4">Collecte de données</p>
 
-    <div class="progress">
-      <span>Progression <strong>0%</strong></span>
-      <div class="bar"></div>
-    </div>
-
-    <ul class="menu">
-      <li routerLink="objectifs" routerLinkActive="active">1. Objectifs</li>
-      <li routerLink="perimetre" routerLinkActive="active">2. Périmètre du Bilan Carbone</li>
-
+    <ul class="space-y-2">
+      <li>
+        <button (click)="scrollTo('objectifs')" class="hover:text-blue-600 font-medium w-full text-left">1. Objectifs</button>
+      </li>
+      <li>
+        <button (click)="scrollTo('perimetre')" class="hover:text-blue-600 font-medium w-full text-left">2. Périmètre</button>
+      </li>
     </ul>
   </aside>
 
-  <!-- Contenu -->
-  <main class="content">
-    <router-outlet></router-outlet>
+  <!-- Contenu scrollable -->
+  <main class="flex-1 ml-72 p-6 space-y-12">
+    <section #objectifsSection>
+      <app-objectifs></app-objectifs>
+    </section>
+
+    <section #perimetreSection>
+      <app-perimetre></app-perimetre>
+    </section>
   </main>
 </div>

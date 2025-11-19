@@ -63,3 +63,13 @@
   background: #ffffff;
   overflow-y: auto;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  min-height: 100vh; /* au moins la hauteur de l’écran */
+}
+
+
